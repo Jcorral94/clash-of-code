@@ -12,3 +12,14 @@ const minutes = M%seconds;
 
 print(hours+hourSuffix+" "+ minutes+minuteSuffix);
 // End Reverse: M = 100 -> "1h 40m"
+
+
+// Reverse: length of strings and numbers and keeping a counter
+const reverseClashInput = readline();
+const lettersRegEx = /[A-Za-z]/g;
+const numbersRegEx = /[0-9]/g;
+
+const stringLength = reverseClashInput.match(lettersRegEx)?.length || 0;
+const numberLength = reverseClashInput.match(numbersRegEx)?.length || 0;
+print(stringLength, numberLength);
+// End Reverse: length of strings and numbers and keeping a counter
