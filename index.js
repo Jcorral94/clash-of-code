@@ -23,3 +23,19 @@ const stringLength = reverseClashInput.match(lettersRegEx)?.length || 0;
 const numberLength = reverseClashInput.match(numbersRegEx)?.length || 0;
 print(stringLength, numberLength);
 // End Reverse: length of strings and numbers and keeping a counter
+
+
+// Reverse: T = 01010000 T2 = 00000000 Answer: 01010000
+const T = readline();
+const T2 = readline();
+let c = "";
+for(let i = 0; i < T.length; i++){
+    const a = T[i];
+    const b = T2[i];
+
+    c += Math.max(a, b);
+}
+
+console.log(c);
+
+// End Reverse: T = 01010000 T2 = 00000000 Answer: 01010000
