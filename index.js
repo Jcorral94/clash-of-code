@@ -50,3 +50,12 @@ if(c==10)d+=1
 }
 print(d)
 // End Shortest Mode: n = 100 how many numbers up to 100 have can add up to 10 ie 64 = [6,4] = 100
+
+// Shortest Mode: return the sum of numbers that are divisible by 3 & 5 but make sure not to double count 15
+N=parseInt(readline())
+s=0
+for(i=0;i<=N;i++){
+if(i%3==0||i%5==0)s+=i 
+}
+print(s)
+// END Shortest Mode: return the sum of numbers that are divisible by 3 & 5 but make sure not to double count 15
