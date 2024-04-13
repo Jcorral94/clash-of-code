@@ -59,3 +59,15 @@ if(i%3==0||i%5==0)s+=i
 }
 print(s)
 // END Shortest Mode: return the sum of numbers that are divisible by 3 & 5 but make sure not to double count 15
+
+
+
+// Shortest Mode: ?
+cn=readline(),uv=+readline(),dv=+readline(),co=+readline(),cm=+readline(),d=+readline(), n=0
+if(uv>dv)n+=1
+if(cm > 0 && co > 0 && co === cm)n+=1
+if(d<=15)n+=1
+if(n == 3)print('Great Contribution, Approved!')
+if(n == 2)print("Good Contribution, Approved!")
+if(n <= 1)print("Bad Contribution, Rejected!")
+// END Shortest Mode: ?
