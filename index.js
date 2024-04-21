@@ -77,3 +77,9 @@ l=+readline(),t=readline().split` `,w=[],r=/[A-Za-z0-9]/g
 for(let i=0;i<t.length;i++){w.push(t[i].match(r).join(""))}
 print(w.join(" "))
 // END shortest mode: Secret Message
+
+
+// Shortest Mode: will he get there?
+f=+readline(),d=+readline(),r=+readline(),a=f-(d * r)
+print(a>=0?a:"not enough fuel")
+// End Shortest Mode: will he get there?
