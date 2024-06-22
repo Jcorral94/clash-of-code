@@ -83,3 +83,56 @@ print(w.join(" "))
 f=+readline(),d=+readline(),r=+readline(),a=f-(d * r)
 print(a>=0?a:"not enough fuel")
 // End Shortest Mode: will he get there?
+
+
+// Timer
+function scope(){
+
+    let timer;
+    let min = 1;
+    let sec = 0;
+
+  function init(){
+        start();
+  }
+
+  function start(){
+        if(timer) return;
+
+        timer = setInterval(() => {
+            decrement();
+        }, 1000);
+  }
+
+  function stop(){
+        if(timer){
+            clearInterval(timer);
+            timer = null;
+        }
+  }
+
+  function restart(){
+        stop();
+        min = 2;
+        sec = 59;
+  }
+
+    function decrement(){
+        console.log(`${min}:${sec}`);
+        if(sec > 0){
+            sec--;
+        } else if(min > 0){
+            min--;
+            sec = 59;
+        } else {
+            stop();
+        }
+    }
+
+    return {
+        start,
+        stop,
+        restart
+    };
+}
+//End of Timer
