@@ -136,3 +136,15 @@ function scope(){
     };
 }
 //End of Timer
+
+//return letters in a word that are next or ahead of the previous letter
+w=readline()
+a='abcdefghijklmnopqrstuvwxyz'.split``
+p=w[0]
+d=w.split('').filter(v=>{
+    x=a.indexOf(v)
+    y=a.indexOf(p)
+    if(x>=y){p=v;return v;}
+}).join('')
+console.log(d);
+//end letters in a word
