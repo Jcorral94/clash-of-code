@@ -148,3 +148,27 @@ d=w.split('').filter(v=>{
 }).join('')
 console.log(d);
 //end letters in a word
+
+// choose a side "Yes" or "No"
+const options = ['Yes', 'No'];
+
+const votes = readline().split(' ').reduce((acc, val) => {
+    const index = options.findIndex((v) => v == val);
+    acc[index] += 1;
+    return acc;
+}, [0, 0]);
+
+const [yes, no] = votes;
+
+if(yes > no && no > 0){
+    console.log('Yes');
+} else if(yes < no && yes > 0) {
+    console.log('No');
+} else {
+    if(no === 0){
+        console.log('No!');
+    } else {
+        console.log('Yes!');
+    }
+}
+// end of choose a side "Yes" or "No"
