@@ -172,3 +172,11 @@ if(yes > no && no > 0){
     }
 }
 // end of choose a side "Yes" or "No"
+// 
+const a = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`.split(``);
+const s = readline().split(``).reduce((acc, v) => {
+    acc += a.indexOf(v.toUpperCase()) + 1;
+    return acc;
+}, 0);
+print(s);
+//
