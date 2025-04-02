@@ -180,3 +180,16 @@ const s = readline().split(``).reduce((acc, v) => {
 }, 0);
 print(s);
 //
+
+
+///**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+const S = readline().split('');
+const E = S.filter(v=> +v % 2 == 0);
+const O = S.filter(v => +v % 2 !== 0);
+
+console.log([...E, ...O].join(''));
+//end
