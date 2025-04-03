@@ -193,3 +193,21 @@ const O = S.filter(v => +v % 2 !== 0);
 
 console.log([...E, ...O].join(''));
 //end
+
+// /**
+ * Auto-generated code below aims at helping you parse
+ * the standard input according to the problem statement.
+ **/
+
+const f = parseInt(readline());
+const g = parseInt(readline());
+const d = parseInt(readline());
+
+console.log(`The remaining money is:${g-d}`)
+
+if(f <= g - d){
+    console.log('I can afford');
+} else {
+    console.log('I can\'t afford');
+}
+//end
