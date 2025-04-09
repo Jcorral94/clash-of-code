@@ -211,3 +211,12 @@ if(f <= g - d){
     console.log('I can\'t afford');
 }
 //end
+
+//start
+const m = parseInt(readline());
+
+const b = Array.from({length: m}, (_,i) => i + 1).filter(v=>v%2!==0).join(' ');
+
+console.log(b || 0);
+
+//end
