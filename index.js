@@ -220,3 +220,23 @@ const b = Array.from({length: m}, (_,i) => i + 1).filter(v=>v%2!==0).join(' ');
 console.log(b || 0);
 
 //end
+
+//start
+const s = readline();
+let sum = 0;
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+for (let i = 0; i < s.length; i++) {
+    const b = s[i].toLowerCase();
+    const index = vowels.findIndex(val => val === b);
+    if (index >= 0) {
+        let weight = index + 1;
+        if (s[i] !== b) {
+            weight *= 2;
+        }
+        sum += weight;
+    }
+}
+
+console.log(sum);
+//end
