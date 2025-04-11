@@ -254,7 +254,7 @@ for(let i = 0 ; i < N; i++){
 
     string += ` (number == ${i+1}) return ${(i+1)%2==0};`
 
-    if(i!==N) string += '\n'
+    if(i+1!==N) string += '\n'
 }
 
 string += '}';
