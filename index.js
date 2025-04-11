@@ -240,3 +240,24 @@ for (let i = 0; i < s.length; i++) {
 
 console.log(sum);
 //end
+
+//start
+const N = parseInt(readline());
+let string = `private bool IsEven(int number){\n`;
+
+for(let i = 0 ; i < N; i++){
+    if(i===0){
+        string += `    if`;
+    } else {
+        string += '    else if';
+    }
+
+    string += ` (number == ${i+1}) return ${(i+1)%2==0};`
+
+    if(i!==N) string += '\n'
+}
+
+string += '}';
+
+console.log(N <= 0 ? 'Can\'t create function' : string);
+//end
