@@ -261,3 +261,20 @@ string += '}';
 
 console.log(N <= 0 ? 'Can\'t create function' : string);
 //end
+
+// start
+const n = parseInt(readline());
+const a = parseInt(readline());
+const symbol = readline();
+let parent = '';
+
+for(let i = 0; i < n; i++){
+    let string = ' '.repeat(a+i);
+    string += symbol.repeat(i+1);
+    if(i !== n - 1) string += '\n';
+
+    parent += string;
+}
+
+console.log(parent);
+//end
