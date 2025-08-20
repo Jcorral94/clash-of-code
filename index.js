@@ -278,3 +278,23 @@ for(let i = 0; i < n; i++){
 
 console.log(parent);
 //end
+
+
+//start
+S=readline().toLowerCase();
+A=new Map([['p', 1],['q', 9],['k', 4],['n', 3],['b', 3],['r', 5]])
+B=S.split('').reduce((acc,v)=>acc+A.get(v),0) * ( S.includes('k') ? 200 : 100 );
+print(B)
+//end
+
+//start
+const N = parseInt(readline());
+var inputs = readline().split(' ');
+const hash = new Map();
+
+for( let i = 0 ; i < N ; i++ ) {
+    hash.set(inputs[i], (hash.get(inputs[i]) || 0) + 1);
+}
+console.log(Array.from(hash).filter(([a,b]) => b == 1).reduce((acc,[a, b]) => acc + Number(a), 0).toFixed(1));
+
+//end
