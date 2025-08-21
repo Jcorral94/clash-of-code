@@ -298,3 +298,27 @@ for( let i = 0 ; i < N ; i++ ) {
 console.log(Array.from(hash).filter(([a,b]) => b == 1).reduce((acc,[a, b]) => acc + Number(a), 0).toFixed(1));
 
 //end
+
+
+//start
+function chunk(){
+	const final = [];
+	const array = [1, 2, 3, 4, 5];
+	const cols = 2;
+
+	for(let i = 0; i < array.length; i++){
+		
+		const a = array[i];
+
+		const index = Math.floor(i / cols);
+
+		if(!final[index]){
+			final[index] = [];
+		}
+
+		final[index].push(a);
+	}
+	
+	return final;
+}
+//end
